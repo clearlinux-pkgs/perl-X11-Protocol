@@ -4,7 +4,7 @@
 #
 Name     : perl-X11-Protocol
 Version  : 0.56
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libx/libx11-protocol-perl/libx11-protocol-perl_0.56-7.debian.tar.xz
@@ -75,23 +75,23 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Auth.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Keysyms.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection/FileHandle.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection/INETFH.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection/INETSocket.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection/Socket.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection/UNIXFH.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Connection/UNIXSocket.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Constants.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Ext/BIG_REQUESTS.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Ext/DPMS.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Ext/RENDER.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Ext/SHAPE.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Ext/XC_MISC.pm
-/usr/lib/perl5/vendor_perl/5.26.1/X11/Protocol/Ext/XFree86_Misc.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Auth.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Keysyms.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection/FileHandle.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection/INETFH.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection/INETSocket.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection/Socket.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection/UNIXFH.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Connection/UNIXSocket.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Constants.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Ext/BIG_REQUESTS.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Ext/DPMS.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Ext/RENDER.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Ext/SHAPE.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Ext/XC_MISC.pm
+/usr/lib/perl5/vendor_perl/5.28.0/X11/Protocol/Ext/XFree86_Misc.pm
 
 %files dev
 %defattr(-,root,root,-)
