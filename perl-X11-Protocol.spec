@@ -4,7 +4,7 @@
 #
 Name     : perl-X11-Protocol
 Version  : 0.56
-Release  : 6
+Release  : 7
 URL      : https://cpan.metacpan.org/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libx/libx11-protocol-perl/libx11-protocol-perl_0.56-7.debian.tar.xz
