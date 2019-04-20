@@ -75,23 +75,23 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Auth.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Keysyms.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection/FileHandle.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection/INETFH.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection/INETSocket.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection/Socket.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection/UNIXFH.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Connection/UNIXSocket.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Ext/BIG_REQUESTS.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Ext/DPMS.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Ext/RENDER.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Ext/SHAPE.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Ext/XC_MISC.pm
-/usr/lib/perl5/vendor_perl/5.28.1/X11/Protocol/Ext/XFree86_Misc.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Auth.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Keysyms.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/FileHandle.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/INETFH.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/INETSocket.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/Socket.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/UNIXFH.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/UNIXSocket.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Constants.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/BIG_REQUESTS.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/DPMS.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/RENDER.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/SHAPE.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/XC_MISC.pm
+/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/XFree86_Misc.pm
 
 %files dev
 %defattr(-,root,root,-)
