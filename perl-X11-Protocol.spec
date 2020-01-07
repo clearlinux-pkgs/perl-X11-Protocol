@@ -4,7 +4,7 @@
 #
 Name     : perl-X11-Protocol
 Version  : 0.56
-Release  : 9
+Release  : 10
 URL      : https://cpan.metacpan.org/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SM/SMCCAM/X11-Protocol-0.56.tar.gz
 Source1  : http://http.debian.net/debian/pool/main/libx/libx11-protocol-perl/libx11-protocol-perl_0.56-7.debian.tar.xz
@@ -12,6 +12,7 @@ Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-2.0 MIT X11
 Requires: perl-X11-Protocol-license = %{version}-%{release}
+Requires: perl-X11-Protocol-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -26,6 +27,7 @@ modules in the directory Protocol/Ext: see those files for details).
 Summary: dev components for the perl-X11-Protocol package.
 Group: Development
 Provides: perl-X11-Protocol-devel = %{version}-%{release}
+Requires: perl-X11-Protocol = %{version}-%{release}
 
 %description dev
 dev components for the perl-X11-Protocol package.
@@ -39,18 +41,28 @@ Group: Default
 license components for the perl-X11-Protocol package.
 
 
+%package perl
+Summary: perl components for the perl-X11-Protocol package.
+Group: Default
+Requires: perl-X11-Protocol = %{version}-%{release}
+
+%description perl
+perl components for the perl-X11-Protocol package.
+
+
 %prep
 %setup -q -n X11-Protocol-0.56
-cd ..
-%setup -q -T -D -n X11-Protocol-0.56 -b 1
+cd %{_builddir}
+tar xf %{_sourcedir}/libx11-protocol-perl_0.56-7.debian.tar.xz
+cd %{_builddir}/X11-Protocol-0.56
 mkdir -p deblicense/
-mv %{_topdir}/BUILD/debian/* %{_topdir}/BUILD/X11-Protocol-0.56/deblicense/
+cp -r %{_builddir}/debian/* %{_builddir}/X11-Protocol-0.56/deblicense/
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
+export LANG=C.UTF-8
 if test -f Makefile.PL; then
 %{__perl} Makefile.PL
 make  %{?_smp_mflags}
@@ -62,7 +74,7 @@ fi
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-X11-Protocol
-cp deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-X11-Protocol/deblicense_copyright
+cp %{_builddir}/X11-Protocol-0.56/deblicense/copyright %{buildroot}/usr/share/package-licenses/perl-X11-Protocol/ea8979370f00ba610d869f0c987a24b5687fe658
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -75,23 +87,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Auth.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Keysyms.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/FileHandle.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/INETFH.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/INETSocket.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/Socket.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/UNIXFH.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Connection/UNIXSocket.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/BIG_REQUESTS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/DPMS.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/RENDER.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/SHAPE.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/XC_MISC.pm
-/usr/lib/perl5/vendor_perl/5.28.2/X11/Protocol/Ext/XFree86_Misc.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -114,4 +109,24 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-X11-Protocol/deblicense_copyright
+/usr/share/package-licenses/perl-X11-Protocol/ea8979370f00ba610d869f0c987a24b5687fe658
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Auth.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Keysyms.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection/FileHandle.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection/INETFH.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection/INETSocket.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection/Socket.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection/UNIXFH.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Connection/UNIXSocket.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Ext/BIG_REQUESTS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Ext/DPMS.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Ext/RENDER.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Ext/SHAPE.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Ext/XC_MISC.pm
+/usr/lib/perl5/vendor_perl/5.30.1/X11/Protocol/Ext/XFree86_Misc.pm
